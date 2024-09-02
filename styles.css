@@ -1,0 +1,155 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 卡片布局 */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* 按钮组 */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* 手指图标样式 */
+.icon-hand {
+    color: red; /* 手指图标颜色设置为红色 */
+    font-size: 1.2rem; /* 初始大小 */
+    margin-right: 8px; /* 图标与文字间距 */
+    display: inline-block;
+    transition: all 0.3s ease; /* 动画过渡效果 */
+    animation: move-left-right 2s infinite; /* 添加左右移动效果 */
+}
+
+/* 鼠标悬停时手指图标放大和颜色变化 */
+.btn:hover .icon-hand {
+    color: #ff5722; /* 悬停时颜色变化（可以选择不同的红色） */
+    transform: scale(1.5); /* 悬停时放大效果 */
+}
+
+/* 左右移动动画 */
+@keyframes move-left-right {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px); /* 向右移动 */
+    }
+}
+
+/* 信息板块样式 */
+.info h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #ff5722;
+}
+
+.info p, .info ul {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+/* 脚注 */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
