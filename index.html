@@ -18,11 +18,12 @@
             <section class="alert-section">
                 <article class="alert-card">
                     <p>🚨 为防止网站失联迷路，建议收藏本页地址！🤪</p>
+                    <p><a href="#" onclick="copyToClipboard('https://www.beijicloud.com/')">https://www.beijicloud.com/</a></p>
                 </article>
             </section>
             <section class="cards">
                 <article class="card">
-                    <h2>Apple ID及国际版教程</h2>
+                    <h2>Apple ID及国际版软件应用</h2>
                     <p>查看相关教程，轻松上手登录使用外区Apple ID、Chat GPT、谷歌邮箱、Instagram、FaceBook、Twitter、X、TikTok、TeleGram、Whatsapp等等，畅游墙外无忧。</p>
                     <a href="https://www.beijicloud.com" class="btn" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-hand-point-right icon-hand"></i> 点击进入
@@ -78,10 +79,22 @@
             document.body.removeChild(textarea);
             alert('邮箱已复制到剪贴板！');
         }
+
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('网址已复制到剪贴板！');
+        }
+
         const fontAwesomeScript = document.createElement('script');
         fontAwesomeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js';
         fontAwesomeScript.defer = true;
         document.body.appendChild(fontAwesomeScript);
     </script>
+<script src="https://assets.salesmartly.com/js/project_22168_88385_1719767533.js"></script>
 </body>
 </html>
