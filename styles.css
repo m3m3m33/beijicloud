@@ -1,23 +1,19 @@
-/* 通用样式 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     color: #333;
+    user-select: none;
 }
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -25,7 +21,6 @@ body {
     text-align: center;
 }
 
-/* Header 标题样式 */
 .header-title {
     background: linear-gradient(to right, #007bff, #00bcd4);
     padding: 15px;
@@ -36,50 +31,26 @@ body {
 }
 
 .header-title h1 {
-    font-size: 2.5rem; /* 默认字体大小 */
+    font-size: 2.5rem;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
     line-height: 1.2;
 }
 
-/* 响应式字体大小 */
-@media (max-width: 1200px) {
-    .header-title h1 {
-        font-size: 2.2rem; /* 中等屏幕调整 */
-    }
-}
-
-@media (max-width: 992px) {
-    .header-title h1 {
-        font-size: 2rem; /* 小屏幕调整 */
-    }
-}
-
-@media (max-width: 768px) {
-    .header-title h1 {
-        font-size: 1.8rem; /* 更小屏幕调整 */
-    }
-}
-
-@media (max-width: 576px) {
-    .header-title h1 {
-        font-size: 1.5rem; /* 最小屏幕调整 */
-    }
-}
-
-/* 卡片布局 */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .card {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
 
@@ -88,32 +59,24 @@ body {
 }
 
 .card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #007bff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* 按钮组 */
-.btn-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
 }
 
@@ -126,66 +89,96 @@ body {
     outline-offset: 2px;
 }
 
-/* 手指图标样式 */
 .icon-hand {
-    color: red; /* 手指图标颜色设置为红色 */
-    font-size: 1.2rem; /* 初始大小 */
-    margin-right: 8px; /* 图标与文字间距 */
+    color: red;
+    font-size: 1.2rem;
+    margin-right: 8px;
     display: inline-block;
-    transition: all 0.3s ease; /* 动画过渡效果 */
-    animation: move-left-right 2s infinite; /* 添加左右移动效果 */
+    transition: all 0.3s ease;
+    animation: move-left-right 2s infinite;
 }
 
-/* 鼠标悬停时手指图标放大和颜色变化 */
-.btn:hover .icon-hand {
-    color: #ff5722; /* 悬停时颜色变化（可以选择不同的红色） */
-    transform: scale(1.5); /* 悬停时放大效果 */
-}
-
-/* 左右移动动画 */
 @keyframes move-left-right {
     0%, 100% {
         transform: translateX(0);
     }
     50% {
-        transform: translateX(10px); /* 向右移动 */
+        transform: translateX(10px);
     }
 }
 
-/* 信息板块样式 */
+.info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .info h2 {
-    margin-top: 30px;
-    font-size: 1.5rem;
-    color: #ff5722;
+    color: #007bff;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 .info p, .info ul {
-    text-align: left;
-    margin-bottom: 15px;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.info a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info a:hover {
+    text-decoration: underline;
 }
 
 .info .highlight {
-    color: red; /* 红色字体 */
-    font-weight: bold; /* 加粗字体 */
+    color: #d9534f;
+    font-weight: bold;
 }
 
-.red {
+.info li {
+    margin-bottom: 5px;
+}
+
+.urgent-instruction {
     color: red;
     font-weight: bold;
 }
 
-/* 脚注 */
 footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #555;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer a {
-    color: #007bff;
-    text-decoration: none;
+footer p, footer a {
+    color: #666;
+    font-size: 0.9rem;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #007bff;
+}
+
+.alert-section {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.alert-card {
+    background-color: #fffbe6;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto 20px;
 }
