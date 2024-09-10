@@ -60,6 +60,30 @@
                     本站及跳转前往线路无法打开，请使用自带浏览器或谷歌浏览器切换4G（飞行模式一次）/WIFI或者打开/关闭代理前往。
                 </p>
             </section>
+			<body>
+    <script>
+        // 禁止 F12 和其他开发者工具快捷键
+        document.onkeydown = function(e) {
+            if (e.keyCode === 123) { // F12
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) { // Ctrl+Shift+I
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) { // Ctrl+Shift+C
+                return false;
+            }
+        };
+
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
         </main>
         <footer>
             <div class="contact">
