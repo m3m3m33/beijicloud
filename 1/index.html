@@ -56,8 +56,10 @@
 		<object data="https://tvtvkk.top/share/us5" width="320" height="265"></object><br>
 		<img src="https://img.alicdn.com/imgextra/i3/2217908844828/O1CN01XjO6hy1lXHBwYnm3e_!!2217908844828.webp" alt="登记教程" width="图片宽度" height="图片高度"><br>
 		<object data="https://appleid.ovovv.com/share/jp1" width="320" height="265"></object><br>
-        <object data="https://tvtvkk.top/share/jp1" width="320" height="265"></object><br>	
-        <a href="https://www.beijicloud.com">👉点我提取17+19+ID</a><br>
+        <object data="https://tvtvkk.top/share/jp1" width="320" height="265"></object><br>
+	    <li class="right-align">
+            <a href="https://www.beijicloud.com">👉点我提取已认证17+19+韩国ID</a>
+        </li>		
 		<object data="https://appleid.ovovv.com/share/kr1" width="320" height="265"></object><br>
 		<img src="https://img.alicdn.com/imgextra/i3/2217908844828/O1CN01XjO6hy1lXHBwYnm3e_!!2217908844828.webp" alt="登记教程" width="图片宽度" height="图片高度"><br>
 		<object data="https://tvtvkk.top/share/kr1" width="320" height="265"></object><br>
@@ -127,7 +129,7 @@
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
-    </script>
+    </script>	
 </body>
         </main>
         <footer>
@@ -158,7 +160,41 @@
             document.body.removeChild(textarea);
             alert('网址已复制到剪贴板！');
         }
+        // 预加载网站内容
+        window.addEventListener('load', function() {
+            fetch('https://beiji.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://beiji.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
 
+            fetch('https://shop.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://shop.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+            fetch('https://www.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://www.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+            fetch('https://tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+												
+        });
+
+        // 引入 FontAwesome
         const fontAwesomeScript = document.createElement('script');
         fontAwesomeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js';
         fontAwesomeScript.defer = true;

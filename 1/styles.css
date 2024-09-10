@@ -193,6 +193,22 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* 默认字体大小：相对于视口宽度自适应 */
 .right-align a {
-    font-size: 15px;
+    font-size: 2vw; /* 字体大小基于视口宽度 */
 }
+
+/* 针对手机设备进行优化：最大宽度为768px */
+@media only screen and (max-width: 768px) {
+    .right-align a {
+        font-size: 5vw; /* 针对小屏幕设备，使用更大的相对单位 */
+    }
+}
+
+/* 针对更大屏幕设备的优化（大屏幕） */
+@media only screen and (min-width: 1200px) {
+    .right-align a {
+        font-size: 1.5rem; /* 使用rem单位，使字体更稳定 */
+    }
+}
+
