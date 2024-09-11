@@ -440,7 +440,71 @@
                     </div>
                 </div>
             </nav>
+<body>
+    <script>
+        // 禁止 F12 和其他开发者工具快捷键
+        document.onkeydown = function(e) {
+            if (e.keyCode === 123) { // F12
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) { // Ctrl+Shift+I
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) { // Ctrl+Shift+C
+                return false;
+            }
+        };
 
+        // 禁用右键菜单
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>	
+</body>
+    <script>
+	        // 预加载网站内容
+        window.addEventListener('load', function() {
+            fetch('https://beiji.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://beiji.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+
+            fetch('https://shop.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://shop.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+            fetch('https://www.tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://www.tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+            fetch('https://tvtvk.com', { mode: 'no-cors' })
+                .then(response => {
+                    console.log('预加载https://tvtvk.com');
+                })
+                .catch(error => {
+                    console.error('预加载失败: ', error);
+                });
+												
+        });
+
+        // 引入 FontAwesome
+        const fontAwesomeScript = document.createElement('script');
+        fontAwesomeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js';
+        fontAwesomeScript.defer = true;
+        document.body.appendChild(fontAwesomeScript);
+    </script>
         <section class="info">
             <h2>✉ 联络邮件</h2>
             <p><a href="#" id="email-link" onclick="copyEmail()">lmmm98648@gmail.com</a></p>
