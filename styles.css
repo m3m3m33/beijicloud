@@ -178,3 +178,20 @@ footer {
     text-align: center;
     color: #666;
 }
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
