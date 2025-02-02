@@ -4,14 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="北极云">
-    <meta name="keywords" content="北极云">
-    <title>北极云 | 国际版</title>
+    <meta name="description" content="北极云44s4">
+    <meta name="keywords" content="北极云44s4">
+    <meta name="robots" content="noindex, nofollow"> 
+    <title>44s4 | 人机验证</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+    <script>
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) {  // F12
+                e.preventDefault();
+                alert("F12 被禁用！");
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {  
+                e.preventDefault();
+                alert("开发者工具被禁用！");
+            }
+            if (e.ctrlKey && e.keyCode == 85) {  
+                e.preventDefault();
+                alert("查看源代码被禁用！");
+            }
+        };
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            alert("小伙子？想什么呢？代码是给你看的？");
+        });
+    </script>
+</head>
+<body>
+    <div class="container" role="main">
+        <header class="header-title">
+            <h1>44s4 | 人机验证</h1>
+            <div class="header-links"></div>
+        </header>
+        
+        <main>
+            <section class="alert-section">
+                <article class="alert-card">
+                    <p>🚨 为防止失联迷路，点击收藏本站地址！🤪</p>
+                    <p><a href="#" onclick="copyWebsite()">https://www.44s4.com/</a></p>				
+                </article>
+            </section>
+			<div class="loading-text">火爆进行中，请点击前往...</div>
+            <div class="cta-button-container">
+                <a href="./44s4/1.html" class="cta-button" target="_blank">👉点击前往👈</a>
+            </div>
+            <div class="cta-button-container">
+                <a href="./44s4/1.html" class="cta-button" target="_blank">👉用手点我👈</a>
+            </div>
+            <div class="cta-button-container">
+                <a href="./44s4/1.html" class="cta-button" target="_blank">👉点击前往👈</a>
+            </div>			
+            <footer>
+                <section class="info">
+                    <h2>✉ 联络邮件</h2>
+                    <p><a href="#" id="email-link" onclick="copyEmail()">mail@44s4.com</a></p>
+                    <p>商务合作、投诉建议，代理推广佣金高达90%，请给我发送邮件吧</p>
+                </section>
+                <div class="contact">
+                    <p class="urgent-instruction right-align">
+                        🚨本站及跳转前往线路无法打开，请使用自带浏览器或谷歌浏览器<span style="font-weight: bold; color: red;">切换4G（飞行模式一次）/WIFI或者打开/关闭代理前往。</span>
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
     <script>
         function copyToClipboard(text) {
             const textarea = document.createElement('textarea');
@@ -20,465 +81,17 @@
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            alert('已复制到剪贴板');
-        }
-
-        function copyEmail() {
-            copyToClipboard('lmmm98648@gmail.com');
+            alert('已复制到剪贴板: ' + text); 
         }
 
         function copyWebsite() {
             copyToClipboard('https://www.44s4.com/');
         }
+
+        function copyEmail() {
+            copyToClipboard('mail@44s4.com');
+        }
     </script>
-</head>
-<body>
-    <div class="container" role="main">
-        <header class="header-title" aria-label="北极云 | 发布页标题">
-            <h1>北极云 | 国际版</h1>
-        </header>
-        <main>
-            <section class="alert-section">
-                <article class="alert-card">
-                    <p>🚨 为防止失联迷路，点击收藏本站地址！🤪</p>
-                    <p><a href="#" onclick="copyWebsite()">https://www.44s4.com/</a></p>
-                </article>
-            </section>
-
-            <!-- 卡片1 -->
-            <nav class="navigation" aria-label="beijicloud全球共享苹果ID账号">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i3/2217908844828/O1CN01yxOINH1lXHC57kgnf_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>全球共享苹果ID账号</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/1.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/1.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-							<a href="./pages/500.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉小火箭专用下载ID</a>
-							<a href="./pages/3.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉韩国17+游戏下载ID</a
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片2 -->
-            <nav class="navigation" aria-label="beijicloud Shadowrocket小火箭">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN015YrflX1lXHC243FcH_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Shadowrocket小火箭</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/2.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/4.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-							<a href="./pages/500.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉小火箭专用下载ID</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片3 -->
-            <nav class="navigation" aria-label="beijicloud梯子/科学/魔法上网">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01SK66Bk1lXHC3wEEc2_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>梯子/科学/魔法上网</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./100.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./100.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./100.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./100.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片4 -->
-            <nav class="navigation" aria-label="beijicloud TikTok">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i3/2217908844828/O1CN01QdTquu1lXHBwXyDLV_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>TikTok</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/8.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/9.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/10.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/11.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片5 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN01FI76vE1lXHC6g7KIW_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Instagram</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/12.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/13.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/14.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/15.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片6 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01kwRR251lXHC43lRCd_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>OpenAI ChatGPT</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/16.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/17.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/18.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/19.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片7 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01PpxQSG1lXHC56iZYJ_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>推特X</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/21.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/22.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/23.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/24.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片8 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01hRvjkk1lXHBwXwGnD_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Facebook</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/25.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/26.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/27.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/28.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片9 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN01yb4bIb1lXHC0zc0vB_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>WhatsApp</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/29.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/30.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/31.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/32.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片10 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN01ghN4Tv1lXHC242mWE_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>TeleGram</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/33.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/34.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/35.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/36.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片11 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01D39cNN1lXHC43k1sn_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Line</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/37.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/38.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/39.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/40.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片12 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01BoSggv1lXHC3w6qob_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>YouTube</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/41.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/42.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/43.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/44.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片13 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN01Y4pOPN1lXHC3Qpoe2_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Spotify</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/45.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/46.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/47.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/48.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片14 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i3/2217908844828/O1CN01xVqhG11lXHC0zelOU_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Netflix</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/49.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/50.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/51.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/52.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片15 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i4/2217908844828/O1CN01bjqYRe1lXHC5tRh8G_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Disney</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/53.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/54.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/55.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/56.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片16 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01rImgwV1lXHC1mB7rr_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Linkedin</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/57.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/58.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/59.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/60.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片17 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN01LhL1Ny1lXHC7CMWX5_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Binance币安</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/61.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/62.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片18 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i1/2217908844828/O1CN018MvzCq1lXHC6g90Hv_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>Okx欧易</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/63.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/64.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片19 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i2/2217908844828/O1CN01BME5e51lXHC3KCxH7_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>imToken</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/65.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/66.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- 卡片20 -->
-            <nav class="navigation" aria-label="beijicloud Instagram">
-                <div class="menu-wrapper">
-                    <div class="menu-icon" aria-label="beijicloud菜单图标">
-                        <img src="https://img.alicdn.com/imgextra/i4/2217908844828/O1CN01MkKX351lXHC5tyiwb_!!2217908844828.webp" alt="Menu Icon">
-                    </div>
-                    <div class="menu-content">
-                        <header class="menu-title">
-                            <h1>其他更多国际软件</h1>
-                        </header>
-                        <div class="menu-options">
-                            <a href="./pages/67.html" class="menu-button" rel="noopener noreferrer" aria-label="苹果端入口">👉苹果端</a>
-                            <a href="./pages/68.html" class="menu-button" rel="noopener noreferrer" aria-label="安卓/华为入口">👉安卓/华为端</a>
-                            <a href="./pages/69.html" class="menu-button" rel="noopener noreferrer" aria-label="Win电脑入口">👉Win电脑</a>
-                            <a href="./pages/70.html" class="menu-button" rel="noopener noreferrer" aria-label="Mac电脑入口">👉Mac电脑</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-<body>
-    <script>
-        // 禁止 F12 和其他开发者工具快捷键
-        document.onkeydown = function(e) {
-            if (e.keyCode === 123) { // F12
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) { // Ctrl+Shift+I
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) { // Ctrl+Shift+C
-                return false;
-            }
-        };
-
-        // 禁用右键菜单
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-    </script>	
-</body>
-        <section class="info">
-            <h2><img src="https://img.alicdn.com/imgextra/i2/408949141/O1CN01xSJl3b2HOdQp8WEeN_!!408949141.jpg" alt="图标" style="width: 20px; height: 20px; vertical-align: middle;">代理合作招募</h2>
-        <li class="right-align">
-        <a href="./pages/1000.html">👉❤点我查看具体合作详情❤</a>
-        </li>
-            <p>商务合作、代理推广佣金高达💰90%，我们期待与您的合作。</p>
-        </section>
-        <footer>
-            <div class="contact">
-                <p>🍀TG<img src="https://img.alicdn.com/imgextra/i2/408949141/O1CN01EddElV2HOdQv6lcLo_!!408949141.png" alt="图标" style="width: 20px; height: 20px; vertical-align: middle;">群组：<a href="https://t.me/shjl66" target="_blank" rel="noopener noreferrer">https://t.me/shjl66</a></p>
-                <p>🍀TG<img src="https://img.alicdn.com/imgextra/i2/408949141/O1CN01EddElV2HOdQv6lcLo_!!408949141.png" alt="图标" style="width: 20px; height: 20px; vertical-align: middle;">频道：<a href="https://t.me/beijicloud" target="_blank" rel="noopener noreferrer">https://t.me/beijicloud</a></p>
-                <p>🍀代理合作✉邮箱：<a href="#" id="email" onclick="copyEmail()">lmmm98648@gmail.com</a></p>
-            </div>
-        </footer>
-    <p class="urgent-instruction right-align">
-        本站及跳转前往线路无法打开，请使用自带浏览器或谷歌浏览器<span style="font-weight: bold; color: red;">切换4G（飞行模式一次）/WIFI或者打开/关闭代理前往。</span>
-    </p>
-    </div>
 	<script src="./app.js"></script>
 </body>
 </html>

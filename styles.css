@@ -14,7 +14,7 @@ body {
     width: 90%;
     max-width: 800px;
     padding: 20px;
-    margin: 0 auto; /* 确保容器居中 */
+    margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -27,6 +27,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-title h1 {
@@ -34,116 +37,49 @@ body {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
-    line-height: 1.2;
 }
 
-.navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 20px; /* 两边添加对称留白 */
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
+.progress-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 20px auto;
 }
 
-.menu-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #000;
+    z-index: 1;
 }
 
-.menu-icon {
-    flex: 0 0 auto;
-    padding: 5px;
-    border-radius: 8px;
-    margin-right: 10px;
+svg {
+    transform: rotate(-90deg);
 }
 
-.menu-icon img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.circle-background {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
 }
 
-.menu-content {
-    flex: 1;
+.circle-progress {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s;
 }
 
-.menu-title {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.menu-title h1 {
-    font-size: 1.4rem;
-    margin: 0;
-    color: #333;
-}
-
-.menu-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    justify-items: center;
-}
-
-.menu-button {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    text-align: center;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.menu-button:hover, .menu-button:focus {
-    background-color: #cc0000;
-}
-
-@media (max-width: 768px) {
-    .menu-icon img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .menu-title h1 {
-        font-size: 1.2rem;
-    }
-
-    .menu-button {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-icon img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .menu-title h1 {
-        font-size: 1rem;
-    }
-
-    .menu-button {
-        padding: 6px 10px;
-        font-size: 11px;
-    }
-
-    .menu-options {
-        gap: 8px;
-    }
+.loading-text {
+    font-size: 30px;
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+    position: relative;
 }
 
 .info {
@@ -160,38 +96,54 @@ body {
     margin-bottom: 10px;
 }
 
-.info p, .info ul {
-    font-size: 1rem;
-}
-
-.contact a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.contact a:hover, .contact a:focus {
-    text-decoration: underline;
-}
-
 footer {
     margin-top: 20px;
     text-align: center;
     color: #666;
 }
-.home-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+
+/* 去除链接和邮箱的下划线 */
+a {
     text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    font-family: Arial, sans-serif;
 }
 
-.home-button:hover {
-    background-color: #0056b3;
+a:hover {
+    text-decoration: none;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .header-title {
+        flex-direction: column;
+    }
+}
+
+.cta-button-container {
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 悬停效果 */
+.cta-button:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 点击效果 */
+.cta-button:active {
+    background-color: #0288d1;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
