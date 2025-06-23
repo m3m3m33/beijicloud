@@ -1,97 +1,282 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="北极云44s4">
-    <meta name="keywords" content="北极云44s4">
-    <meta name="robots" content="noindex, nofollow"> 
-    <title>44s4 | 人机验证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>北极云地址发布页，收藏我回家不迷路！</title>
+    <meta name="description" content="北极云-地址发布页，收藏我回家不迷路！">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
-    <script>
-        document.onkeydown = function(e) {
-            if (e.keyCode == 123) {  // F12
-                e.preventDefault();
-                alert("F12 被禁用！");
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {  
-                e.preventDefault();
-                alert("开发者工具被禁用！");
-            }
-            if (e.ctrlKey && e.keyCode == 85) {  
-                e.preventDefault();
-                alert("查看源代码被禁用！");
-            }
-        };
-        document.addEventListener("contextmenu", function(e) {
-            e.preventDefault();
-            alert("小伙子？想什么呢？代码是给你看的？");
-        });
-    </script>
 </head>
 <body>
-    <div class="container" role="main">
-        <header class="header-title">
-            <h1>44s4 | 人机验证</h1>
-            <div class="header-links"></div>
-        </header>
-        
-        <main>
-            <section class="alert-section">
-                <article class="alert-card">
-                    <p>🚨 为防止失联迷路，点击收藏本站地址！🤪</p>
-                    <p><a href="#" onclick="copyWebsite()">https://www.44s4.com/</a></p>				
-                </article>
-            </section>
-			<div class="loading-text">火爆进行中，请点击前往...</div>
-            <div class="cta-button-container">
-                <a href="./44s4/1.html" class="cta-button" target="_blank">👉点击前往👈</a>
-            </div>
-            <div class="cta-button-container">
-                <a href="./44s4/1.html" class="cta-button" target="_blank">👉用手点我👈</a>
-            </div>
-            <div class="cta-button-container">
-                <a href="./44s4/1.html" class="cta-button" target="_blank">👉点击前往👈</a>
-            </div>			
-            <footer>
-                <section class="info">
-                    <h2>✉ 联络邮件</h2>
-                    <p><a href="#" id="email-link" onclick="copyEmail()">mail@44s4.com</a></p>
-                    <p>商务合作、投诉建议，代理推广佣金高达90%，请给我发送邮件吧</p>
-                </section>
-                <div class="contact">
-                    <p class="urgent-instruction right-align">
-                        🚨本站及跳转前往线路无法打开，请使用自带浏览器或谷歌浏览器<span style="font-weight: bold; color: red;">切换4G（飞行模式一次）/WIFI或者打开/关闭代理前往。</span>
-                    </p>
-                </div>
-            </footer>
-        </main>
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-
-    <script>
-        function copyToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            alert('已复制到剪贴板: ' + text); 
-        }
-
-        function copyWebsite() {
-            copyToClipboard('https://www.44s4.com/');
-        }
-
-        function copyEmail() {
-            copyToClipboard('mail@44s4.com');
-        }
-    </script>
-	<script src="./app.js"></script>
+    <div class="wrapper">
+        <button class="mode-toggle" id="mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <main class="main">
+            <h1>北极云44s4🚨发布页</h1>
+            <button class="bookmark-btn">
+                <p>🚨 为防止失联迷路，点击收藏本站地址！🤪</p>
+                <p><a href="#" onclick="copyWebsite()">https://www.44s4.com</a></p>
+            </button>
+            <ul id="url-list">
+                <li data-url="https://www.44s4.shop">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路一：</span>
+                                <a href="https://vip.44s4.top" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.top
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-normal">
+                                    <i class="fas fa-check-circle"></i>正常
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.top')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.44s4.xyz">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路二：</span>
+                                <a href="https://vip.44s4.xyz" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.xyz
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.xyz')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.44s4.vip">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路三：</span>
+                                <a href="https://vip.44s4.vip" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.vip
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.vip')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.44s4.blog">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路四：</span>
+                                <a href="https://vip.44s4.blog" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.blog
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.blog')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.44s4.shop">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路五：</span>
+                                <a href="https://vip.44s4.shop" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.shop
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.shop')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.44s4.work">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路六：</span>
+                                <a href="https://vip.44s4.work" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.44s4.work
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.44s4.work')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.tvtvk.com">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路七：</span>
+                                <a href="https://vip.tvtvk.com" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.tvtvk.com
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.tvtvk.com')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.tvtvk.net">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路八：</span>
+                                <a href="https://vip.tvtvk.net" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.tvtvk.net
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.tvtvk.net')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.tvtvk.top">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路九：</span>
+                                <a href="https://vip.tvtvk.top" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.tvtvk.top
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.tvtvk.top')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+                <li data-url="https://vip.tvtvk.shop">
+                    <span class="ms-display">-ms</span>
+                    <div class="url-content">
+                        <div class="url-row">
+                            <div class="url-title-link">
+                                <span>线路十：</span>
+                                <a href="https://vip.tvtvk.shop" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> https://vip.tvtvk.shop
+                                </a>
+                            </div>
+                            <div class="url-actions">
+                                <span class="status-badge status-checking">
+                                    <i class="fas fa-spinner fa-spin"></i>检测中...
+                                </span>
+                                <button class="guide-btn" onclick="showGuide('https://vip.tvtvk.shop')">
+                                    <i class="fas fa-info-circle"></i>访问指南
+                                </button>
+                            </div>
+                        </div>
+                        <span class="estimated-time">
+                            <i class="fas fa-clock"></i>预计打开时间: <span class="time-value">-</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="notice">
+                <i class="fas fa-info-circle"></i> 本站及跳转前往线路无法打开，请使用自带浏览器或谷歌浏览器<span style="font-weight: bold; color: red;">切换4G（飞行模式一次）/WIFI或者打开/关闭代理前往。</span>
+            </div>
+            <div id="stats-container"></div>
+        </main>
+        <footer class="footer">
+            <p>&copy; 北极云导航页. 保留所有权利。</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
